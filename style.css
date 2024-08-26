@@ -110,7 +110,7 @@ nav .toggle_btn {
   width: unset;
   height: 0px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
