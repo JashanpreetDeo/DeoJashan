@@ -1,0 +1,294 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Pixelify Sans", sans-serif;
+  line-height: 1.1;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: image-set(url("Pixilart\ -\ Magic\ castle.gif"));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.container {
+  min-width: 80%;
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  color: rgb(54, 53, 53);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+#logo {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: 200px;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 1.5px;
+  transition: all .1s ease-in;
+}
+
+#logo:hover {
+letter-spacing: 3px;
+color: black;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  flex: 1;
+  gap: 7rem;
+  list-style-type: none;
+}
+
+nav li a {
+  all: unset;
+  color: rgb(255, 255, 255);
+  transition: .1s ease-in;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+nav li a:hover{
+  color: rgb(0, 0, 0);
+}
+
+nav li a::after {
+  content: '';
+  position: absolute;
+  bottom: 9px;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+
+  background: rgb(0, 0, 0);
+  border-radius: 1rem;
+  transition: .2s ease-in;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+nav .toggle_btn {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  width: unset;
+  height: 0px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 125px;
+}
+.dropdown_menu li {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+.dropdown_menu li a{
+  color: rgb(255, 255, 255);
+  transition: .1s ease-in;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+  color: black;
+}
+
+.dropdown_menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 9px;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+
+  background: rgb(0, 0, 0);
+  border-radius: 1rem;
+  transition: .2s ease-in;
+}
+.dropdown_menu li a:hover::after {
+  width: 100%;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  min-height:  60vh;
+}
+
+
+
+.content .text {
+  width: 50%;
+  padding: 0px 0px;
+}
+
+.content .text h1 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 110%;
+  margin-bottom: 1.5rem;
+
+}
+
+.content .text p {
+  font-size: 1vw;
+}
+
+.content button {
+  all: unset;
+  border-bottom-right-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.content button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 255, 255);
+  z-index: -1;
+  transition: .2s ease-out;
+}
+
+.content button:hover{
+  color: rgb(54, 53, 53) ;
+}
+
+.content button:hover::after {
+ width: 100%;
+}
+
+.content img{
+  width: 300px;
+  
+}
+
+
+@media only screen and (max-width: 1240px) {
+
+  nav .content, .text {
+    width: 90% !important;
+  }
+  
+
+  
+  nav ul {
+    gap: 2rem;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 40px !important;
+  }
+
+  .content p {
+    font-size: 16px !important;
+    text-align: center;
+  }
+
+  .content img {
+    width: 190px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+  nav ul {
+    display: none;
+  }
+
+  nav .toggle_btn {
+    display: block ;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+  nav ul a {
+    font-size: 14px !important;
+  }
+
+  .content h1 {
+    font-size: 34px !important;
+  }
+
+  .content p {
+    font-size: 15px !important;
+  }
+}
+
+
+
+
+
+
+
