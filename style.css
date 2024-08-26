@@ -102,10 +102,11 @@ nav .toggle_btn {
 }
 
 .dropdown_menu {
+  margin: auto;
   display: none;
   position: absolute;
-  right: 10px;
-  left: 10px;
+  right: 30px;
+  left: 30px;
   width: unset;
   height: 0px;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
